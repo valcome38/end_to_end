@@ -9,6 +9,11 @@ from typing import List
 from datetime import datetime
 
 app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"message": "Hello from Render!"}
+
 request_count = 0
 
 # Загрузка CatBoost модели и списка фичей
